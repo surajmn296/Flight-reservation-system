@@ -4,7 +4,7 @@ public class Flight {
 //    We should be able to get the flight details and check the availability of
 //    seats. Whenever a seat is booked on a flight, the number of seats booked
 //    should be updated for that flight.
-private String flightNumber ;
+    private String flightNumber ;
     private String airline ;
     private int capacity ;
     private int BookedSeats ;

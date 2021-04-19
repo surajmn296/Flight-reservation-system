@@ -13,7 +13,7 @@ public abstract class Ticket {
     private String seatNumber;
     private float price;
     private float duration;
-    public Flight flight;
+    private Flight flight;
 
     public Ticket(String PNR_number, String departure, String destination, String seatNumber, float price, float duration, Flight flight) {
         this.PNR_number = PNR_number;
@@ -71,5 +71,13 @@ public abstract class Ticket {
 
     public void setSeatNumber(String seatNumber) {
         this.seatNumber = seatNumber;
+    }
+
+    public Flight getFlight() {
+        return flight;
+    }
+
+    public void setFlight(Flight flight) {
+        this.flight = flight;
     }
 }

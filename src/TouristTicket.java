@@ -8,10 +8,10 @@ public class TouristTicket extends Ticket {
     String tourist_locations;
     Flight flight;
 
-    public TouristTicket(String PNR_number, String departure, String destination, String seatNumber, float price, float duration, Flight flight, String hotelAddress, String tourist_locations, Flight flight1) {
+    public TouristTicket(String PNR_number, String departure, String destination, String seatNumber, float price, float duration, Flight flight, String hotelAddress, String tourist_locations) {
         super(PNR_number, departure, destination, seatNumber, price, duration, flight);
         HotelAddress = hotelAddress;
         this.tourist_locations = tourist_locations;
-        this.flight = flight1;
+
     }
 }
