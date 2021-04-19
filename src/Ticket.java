@@ -1,4 +1,4 @@
-public class Ticket {
+public abstract class Ticket {
    /* For each ticket, we should be able to keep track
     of the PNR number, departure and destination locations, the flight on
     which the seat is booked, the date and time of departure and arrival, the
@@ -13,9 +13,15 @@ public class Ticket {
     private String seatNumber;
     private float price;
     private float duration;
-    Flight flight;
+    public Flight flight;
 
-    public Ticket(Flight flight) {
+    public Ticket(String PNR_number, String departure, String destination, String seatNumber, float price, float duration, Flight flight) {
+        this.PNR_number = PNR_number;
+        this.departure = departure;
+        this.destination = destination;
+        this.seatNumber = seatNumber;
+        this.price = price;
+        this.duration = duration;
         this.flight = flight;
     }
 
