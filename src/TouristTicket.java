@@ -5,9 +5,8 @@ public class TouristTicket {
 //    or remove tourist locations if required.
 
     String HotelAddress;
-    String tourist locations;
-
-
+    String tourist_locations;
+    Flight flight;
 
 
 }

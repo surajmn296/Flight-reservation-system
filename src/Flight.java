@@ -4,9 +4,47 @@ public class Flight {
 //    We should be able to get the flight details and check the availability of
 //    seats. Whenever a seat is booked on a flight, the number of seats booked
 //    should be updated for that flight.
-String flightNumber ;
-String airline ;
-int capacity ;
-int BookedSeats ;
+private String flightNumber ;
+    private String airline ;
+    private int capacity ;
+    private int BookedSeats ;
 
+    public Flight(String flightNumber, String airline, int capacity, int bookedSeats) {
+        this.flightNumber = flightNumber;
+        this.airline = airline;
+        this.capacity = capacity;
+        BookedSeats = bookedSeats;
+    }
+
+    public String getFlightNumber() {
+        return flightNumber;
+    }
+
+    public void setFlightNumber(String flightNumber) {
+        this.flightNumber = flightNumber;
+    }
+
+    public String getAirline() {
+        return airline;
+    }
+
+    public void setAirline(String airline) {
+        this.airline = airline;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public int getBookedSeats() {
+        return BookedSeats;
+    }
+
+    public void setBookedSeats(int bookedSeats) {
+        BookedSeats = bookedSeats;
+    }
 }
