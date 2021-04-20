@@ -14,8 +14,13 @@ public abstract class Ticket {
     private float price;
     private float duration;
     private Flight flight;
+    private String DepartureDatetime ;
+    private String ArrivalDatetime ;
+    private boolean Cancelled;
+    private Passenger passenger;
 
-    public Ticket(String PNR_number, String departure, String destination, String seatNumber, float price, float duration, Flight flight) {
+
+    public Ticket(String PNR_number, String departure, String destination, String seatNumber, float price, float duration, Flight flight, String departureDatetime, String arrivalDatetime, boolean cancelled, Passenger passenger) {
         this.PNR_number = PNR_number;
         this.departure = departure;
         this.destination = destination;
@@ -23,8 +28,39 @@ public abstract class Ticket {
         this.price = price;
         this.duration = duration;
         this.flight = flight;
+        DepartureDatetime = departureDatetime;
+        ArrivalDatetime = arrivalDatetime;
+        Cancelled = cancelled;
+        this.passenger = passenger;
     }
 
+    public String getDepartureDatetime() {
+        return DepartureDatetime;
+    }
+
+    public void setDepartureDatetime(String departureDatetime) {
+        DepartureDatetime = departureDatetime;
+    }
+
+    public String getArrivalDatetime() {
+        return ArrivalDatetime;
+    }
+
+    public void setArrivalDatetime(String arrivalDatetime) {
+        ArrivalDatetime = arrivalDatetime;
+    }
+
+    public boolean isCancelled() {
+        return Cancelled;
+    }
+
+    public void Cancel() {
+        Cancelled = true;
+    }
+    public String checkStatus(){
+        if(isCancelled()==false){return "confirmed";}
+        else {return "cancelled";}
+    }
     public String getPNR_number() {
         return PNR_number;
     }
@@ -79,5 +115,11 @@ public abstract class Ticket {
 
     public void setFlight(Flight flight) {
         this.flight = flight;
+    }
+    public Passenger getPassenger() {
+        return passenger;
+    }
+    public void setPassenger(Passenger passenger) {
+        this.passenger = passenger;
     }
 }

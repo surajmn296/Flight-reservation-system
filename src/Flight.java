@@ -47,4 +47,14 @@ public class Flight {
     public void setBookedSeats(int bookedSeats) {
         BookedSeats = bookedSeats;
     }
+
+    public void getFlightDetails(){
+        System.out.println(getFlightNumber());
+        System.out.println(getAirline());
+        System.out.println(getBookedSeats());
+        System.out.println(getCapacity());
+    }
+        public void incrementBookingCounter(){
+        ++BookedSeats;
+    }
 }

@@ -5,12 +5,20 @@ We should be able to check the special services availed by the passengers
 and also update them if required*/
 
 
-    String[] SpecialServices;
+    private String[] SpecialServices;
 
-    public RegularTicket(String PNR_number, String departure, String destination, String seatNumber, float price, float duration, Flight flight,String[] specialServices) {
-        super(PNR_number, departure, destination, seatNumber, price, duration, flight);
+    public RegularTicket(String PNR_number, String departure, String destination, String seatNumber, float price, float duration, Flight flight, String departureDatetime, String arrivalDatetime, boolean cancelled, Passenger passenger, String[] specialServices) {
+        super(PNR_number, departure, destination, seatNumber, price, duration, flight, departureDatetime, arrivalDatetime, cancelled, passenger);
         SpecialServices = specialServices;
     }
 
+    public String[] getSpecialServices() {
+        return SpecialServices;
+    }
 
+    public void setSpecialServices(String[] specialServices) {
+        SpecialServices = specialServices;
+    }
+    public void updateSpecialServices(String[] SpecialServices){
+        this.SpecialServices=SpecialServices; }
 }
